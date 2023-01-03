@@ -42,7 +42,9 @@
 
     // .footer__location
     &__location {
+        padding-bottom: 20px;
         @media screen and (min-width: $breakpoint-md) {
+            padding-bottom: 0;
             display: flex;
             align-items: center;
             gap: 26px;
