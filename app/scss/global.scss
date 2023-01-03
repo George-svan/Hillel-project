@@ -1,0 +1,88 @@
+body {
+	font-family: 'Montserrat';
+	font-weight: 400;
+	
+}
+
+html, body {
+	scroll-behavior: smooth;
+}
+
+.container {
+	
+	@media screen and (min-width: $breakpoint-md) {
+		max-width: 648px;
+		margin: 0 auto;
+	}
+
+	@media screen and (min-width: $breakpoint-lg) {
+		max-width: 904px;
+	}
+
+	@media screen and (min-width: $breakpoint-xl) {
+		max-width: 1320px;
+	}
+
+	@media screen and (min-width: $breakpoint-xxl) {
+		max-width: 1600px;
+	}
+}
+
+.inner-header {
+	background: $gradient-supersoft-bg;
+
+}
+.logo-text {
+    font-size: 20px;
+    line-height: 24px;
+	@media screen and (min-width: $breakpoint-md) {
+		display: none;
+	}
+}
+
+.main-title {
+	font-weight: 700;
+	font-size: 38px;
+	line-height: 46px;
+}
+
+.active-gradient {
+	background: $gradient-red-text-bg;
+	color: transparent;
+	background-clip: text;
+}
+
+.active-text {
+	color: $accent-color;
+}
+
+.hover-link:hover {
+	color: $accent-color;
+	fill: $accent-color;
+}
+
+.inner-header {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 95%;
+		height: 10px;
+		background: #CACADB;
+		border-radius: 0px 0px 12px 12px;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		top: calc(100% + 10px);
+		left: 50%;
+		transform: translateX(-50%);
+		width: 90%;
+		height: 10px;
+		background: #E7E7F2;
+		border-radius: 0px 0px 12px 12px;
+	}
+}

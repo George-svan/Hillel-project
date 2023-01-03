@@ -1,0 +1,122 @@
+// They already trust us -----------------------------------------------------------------------------------------------------
+.main-trust {
+
+    // .main-trust__container
+    &__container {
+        padding: 0 30px;
+        @media screen and (min-width: $breakpoint-xxl) {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+    }
+
+    // .main-trust__clients
+    &__clients {
+    }
+
+    // .main-trust__clients-title
+    &__clients-title {
+        padding-top: 60px;
+        margin-bottom: 30px;
+        text-align: center;
+        color: $main-color;
+        font-weight: 700;
+        text-transform: uppercase;
+        @include caps-subtitle;
+    }
+
+    // .main-trust__clients-trust
+    &__clients-trust {
+        @media screen and (min-width: $breakpoint-md) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        @media screen and (min-width: $breakpoint-xxl) {
+            max-width: 1720px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+    }
+
+    // .main-trust__clients-trust-box
+    &__clients-trust-box {
+        height: 120px;
+        position: relative;
+        @media screen and (min-width: $breakpoint-md) {
+            flex: 1 1 30%;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            flex: 1 1 25%;
+        }
+        &:nth-child(1) {
+            background: $hillel;
+        }
+        &:nth-child(2) {
+            background: $wannabiz;
+        }
+        &:nth-child(3) {
+            background: $tapgerine;
+        }
+        &:nth-child(4) {
+            background: $dlook;
+        }
+        &:nth-child(5) {
+            background: $orangear;
+        }
+        &:nth-child(6) {
+            background: $adtellige;
+        }
+        &:nth-child(7) {
+            background: $clicky;
+            display: none;
+            @media screen and (min-width: $breakpoint-md) {
+                display: block;
+            }
+        }
+        &:nth-child(8) {
+            background: $eco-leasing;
+            display: none;
+            @media screen and (min-width: $breakpoint-md) {
+                display: block;
+            }
+        }
+        &:nth-child(9) {
+            background: $infa-tek;
+            display: none;
+            @media screen and (min-width: $breakpoint-md) {
+                display: block;
+            }
+        }
+        &:nth-child(10) {
+            background: $city-park;
+            display: none;
+            @media screen and (min-width: $breakpoint-md) {
+                display: block;
+            }
+        }
+        &:nth-child(11) {
+            background: $art-print;
+            display: none;
+            @media screen and (min-width: $breakpoint-md) {
+                display: block;
+            }
+        }
+        &:nth-child(12) {
+            background: $ultimate-card;
+            display: none;
+            @media screen and (min-width: $breakpoint-md) {
+                display: block;
+            }
+        }
+    }
+
+    // .main-trust__clients-trust-logo
+    &__clients-trust-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+}
+

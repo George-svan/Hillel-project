@@ -1,0 +1,115 @@
+.intro {
+    padding: 30px 0;
+    @media screen and (min-width: $breakpoint-md) {
+        padding: 60px 0;
+    }
+    // .intro__container
+    &__container {
+        padding: 0 30px;
+        @media screen and (min-width: $breakpoint-md) {
+            padding: 0;
+        }
+        @media screen and (min-width: $breakpoint-xl) {
+            padding: 0 120px;
+        }
+    }
+
+    // .intro__box
+    &__box {
+        @media screen and (min-width: $breakpoint-lg) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    // .intro__title
+    &__title {
+        padding-bottom: 30px;
+        @media screen and (min-width: $breakpoint-lg) {
+            padding-bottom: 0;
+            margin-right: 30px;
+            flex: 1 0 55%;
+        }
+        @media screen and (min-width: $breakpoint-xl) {
+            flex: 1 0 61%;
+        }
+        @media screen and (min-width: $breakpoint-xl) {
+            flex: 1 0 69%;
+        }
+    }
+
+    // .intro__title-title
+    &__title-title {
+        margin-bottom: 28px;
+        font-weight: 700;
+        @include title;
+        @media screen and (min-width: $breakpoint-md) {
+            @include main-title;
+        }
+    }
+
+    // .intro__title-text
+    &__title-text {
+        margin-bottom: 20px;
+        @include description-text;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    // .intro__list
+    &__list {
+        padding-left: 34px;
+        position: relative;
+        @media screen and (min-width: $breakpoint-lg) {
+            align-self: flex-start;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 105%;
+            background: $grey-separator-color;
+        }
+    }
+
+    // .intro__list-item
+    &__list-item {
+        padding-bottom: 40px;
+        &:last-child{
+            padding-bottom: 0;
+        }
+    }
+
+    // .intro__list-title
+    &__list-title{
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    // .intro__list-icon
+    &__list-icon {
+        width: 32px;
+        height: 32px;
+        fill: $accent-color;
+    }
+
+    // .intro__list-subtitle
+    &__list-subtitle {
+        font-weight: 700;
+        line-height: 1;
+        @include main-title;
+    }
+
+    // .intro__list-text
+    &__list-text {
+        color: $main-color;
+        @include pre-subtitle;
+    }
+}

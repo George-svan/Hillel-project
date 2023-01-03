@@ -1,0 +1,103 @@
+.active-text {
+	color: $accent-color;
+}
+
+.about-us-header {
+
+    // .about-us-header__main
+    &__main {
+        display: flex;
+		flex-flow: column;
+        color: $grey-text-color;
+    }
+
+    // .about-us-header__main-section-lang
+    &__main-section-lang{
+        background: $grey-bg-color;
+    }
+
+    // .about-us-header__lang-list-item
+    &__lang-list-item {
+        &:hover {
+            background: $grey-bg-color;
+        }
+        &.active {
+            color: #fff;
+            background: $accent-color;
+        }
+    }
+
+    // .about-us-header__main-section-phone
+    &__main-section-phone {
+        color: $grey-text-color;
+    }
+
+    // .about-us-header__facebook-icon
+    &__facebook-icon {
+        fill: $grey-text-color;
+    }
+
+    // .about-us-header__logo-text
+    &__logo-text{
+        color: $main-color;
+    }
+
+    // .about-us-header__logo-burger
+    &__logo-burger{
+        &:hover {
+            background: $grey-separator-color;
+        }
+        &::before {
+            color: $main-color;
+        }
+    }
+
+    // .about-us-header__nav
+    &__nav {
+        background: $grey-bg-color;
+    }
+    
+    // .about-us-header__nav-list
+    &__nav-list{
+        
+    }
+
+    // .about-us-header__list-item
+    &__list-item {
+        background: #fff;
+        position: relative;
+        @media screen and (min-width: $breakpoint-md) {
+            &::before {
+                background: $active-regular;
+            }
+            &:hover::before {
+                display: block;
+                top: 100%;
+                right: auto;
+            }
+            &.active-before {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    top: 100%;
+                    right: 0;
+                    width: 100%;
+                    height: 2px;
+                    background: $accent-color;
+                }
+            }
+        }
+    }
+
+    // .about-us-header__list-link
+    &__list-link{
+        @media screen and (min-width: $breakpoint-md) {
+            color: $active-regular;
+        }
+        &.active-text {
+            color: $accent-color;
+        }
+    }
+}
+

@@ -1,0 +1,139 @@
+.header-content {
+    color: #fff;
+    
+    // .header-content__container
+    &__container{
+        padding: 0 30px;
+        @media screen and (min-width: $breakpoint-md) {
+            padding: 0 ;
+        }
+        @media screen and (min-width: $breakpoint-xl) {
+            padding: 0 120px;
+        }
+        @media screen and (min-width: $breakpoint-xxl) {
+            padding: 0 80px;
+        }
+    }
+    // .header-content__scroll
+    &__scroll {
+        padding: 30px 0;
+        @media screen and (min-width: $breakpoint-md) {
+            padding: 60px 0;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    // .header-content__scroll-text
+    &__scroll-text {
+        display: flex;
+        gap: 30px;
+        flex-wrap: nowrap;
+        position: relative;
+        overflow: scroll;
+        font-weight: 700;
+        color: $grey-text-color;
+        white-space: nowrap;
+        margin-bottom: 30px;
+        margin-right: -30px;
+        @include title;
+        @media screen and (min-width: $breakpoint-md) {
+            margin-bottom: 60px;
+            margin-right: calc(-50vw + 324px);
+            @include main-title;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            margin-bottom: 0;
+            margin-right: 60px;
+            flex: 1 0 375px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+            overflow: visible;
+            
+        }
+
+        &::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+        }
+    }
+
+    // .header-content__scroll-item
+    &__scroll-item {
+        transition: all .4s ease;
+        cursor: pointer;
+        &:hover {
+            color: $accent-color;
+            fill: $accent-color;
+        }
+        &.active-gradient {
+            background: $gradient-red-text-bg;
+            color: transparent;
+            background-clip: text;
+        }
+    }
+
+    // .header-content__scroll-description
+    &__scroll-description {
+        position: relative;
+        padding-top: 34px;
+        @media screen and (min-width: $breakpoint-md) {
+            padding-top: 64px;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            padding-top: 0;
+            padding-left: 64px;
+            display: flex;
+            align-content: center;
+            flex-wrap: wrap;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            @media screen and (min-width: $breakpoint-lg) {
+                top: 50%;
+                left: 0;
+                width: 4px;
+                height: 110%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    // .header-content__scroll-description-box
+    &__scroll-description-box {
+        display: none;
+        &.active-tab {
+            display: block;
+        }
+    }
+
+    // .header-content__scroll-description-h2
+    &__scroll-description-h2 {
+        margin-bottom: 30px;
+        font-weight: 700;
+        @include title-m;
+        @media screen and (min-width: $breakpoint-md) {
+            @include title;
+        }
+    }
+
+    // .header-content__scroll-description-text
+    &__scroll-description-text {
+        @include description-text;
+    }
+
+    // .header-content__services-cards
+    &__services-cards {
+    }
+}
+

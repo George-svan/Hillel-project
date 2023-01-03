@@ -1,0 +1,125 @@
+// SWIPER -----------------------------------------------------------------------------------------------------
+.main-trust {
+
+    // .main-trust__swipe-box
+    &__swipe-box {
+        font-weight: 700;
+        margin-top: 50px;
+        position: relative;
+        padding-bottom: 46px;
+    }
+
+    // .main-trust__swiper
+    &__swiper {
+    }
+
+    // .main-trust__swiper-wrapper
+    &__swiper-wrapper {
+    }
+
+    // .main-trust__slide
+    &__slide {
+        background: $grey-bg-color;
+        border-radius: 12px;
+        overflow: hidden;
+        @media screen and (min-width: $breakpoint-lg) {
+            display: flex;
+        }
+    }
+
+    // .main-trust__slide-image
+    &__slide-image {
+        height: 500px;
+        position: relative;
+        img {
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+        @media screen and (min-width: $breakpoint-lg) {
+            height: auto;
+            flex: 1 0 400px;
+        }
+    }
+
+    // .main-trust__slide-box
+    &__slide-box {
+        padding: 30px;
+    }
+
+    // .main-trust__slide-link
+    &__slide-link {
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $active-regular;
+        margin-bottom: 10px;
+        transition: .5s ease;
+        @include caps-subtitle;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: calc(100% + 4px);
+            width: 6px;
+            height: 6px;
+            border-bottom: 2px solid $active-regular;
+            border-left: 2px solid $active-regular;
+            transform: rotate(-135deg);
+        }
+    }
+
+    // .main-trust__slide-title
+    &__slide-title {
+        margin-bottom: 30px;
+        @include title;
+    }
+
+    // .main-trust__slide-name
+    &__slide-name {
+        p {
+			margin-bottom: 6px;
+            color: $grey-text-color;
+            @include pre-subtitle;
+		}
+		p+p {
+			font-weight: 400;
+            margin-bottom: 0;
+            color: $grey-text-color;
+            @include cards-box-text;
+		}
+    }
+
+    // .main-trust__swiper-pagination
+    &__swiper-pagination {
+        &.swiper-pagination {
+            bottom: 0;
+        }
+        .swiper-pagination-bullet {
+			width: 16px;
+			height: 16px;
+            background: $active-regular;
+            opacity: 0.2;
+            &:hover{
+                opacity: 0.6;
+            }
+			&.swiper-pagination-bullet-active {
+				background: $active-regular;
+                opacity: 1;
+			}
+		}
+    }
+}
+
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-pagination {
+}
