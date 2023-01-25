@@ -37,9 +37,35 @@
         fill: $grey-text-color;
     }
 
+    // .about-us-header__logo-link
+    &__logo-link {
+        @media screen and (min-width: $breakpoint-md) {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 0;
+                right: -15px;
+                height: 80%;
+                width: 4px;
+                background: $accent_color;
+                transform: rotate(18deg);
+            }
+        }
+    }
+
     // .about-us-header__logo-text
     &__logo-text{
         color: $main-color;
+        &.logo-text {
+            max-width: 159px;
+            @media screen and (min-width: $breakpoint-md) {
+                display: block;
+                font-size: 36px;
+                line-height: 44px;
+            }
+        }
     }
 
     // .about-us-header__logo-burger
@@ -66,7 +92,17 @@
     &__list-item {
         background: #fff;
         position: relative;
+        &.active-text {
+            &::before {
+                display: none;
+            }
+        }
         @media screen and (min-width: $breakpoint-md) {
+            &.active-text {
+                &::before {
+                    display: block;
+                }
+            }
             &::before {
                 background: $active-regular;
             }
@@ -75,18 +111,7 @@
                 top: 100%;
                 right: auto;
             }
-            &.active-before {
-                &::before {
-                    content: '';
-                    position: absolute;
-                    display: block;
-                    top: 100%;
-                    right: 0;
-                    width: 100%;
-                    height: 2px;
-                    background: $accent-color;
-                }
-            }
+            
         }
     }
 

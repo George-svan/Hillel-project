@@ -1,0 +1,122 @@
+.team {
+    padding: 30px 0;
+    @media screen and (min-width: $breakpoint-md) {
+        padding: 60px 0 30px 0;
+    }
+    // .team__container
+    &__container {
+        padding: 0 30px;
+        @media screen and (min-width: $breakpoint-md) {
+            padding: 0;
+        }
+        @media screen and (min-width: $breakpoint-xl) {
+            padding: 0 120px;
+        }
+    }
+
+    // .team__title
+    &__title {
+        font-weight: 700;
+        @include title;
+        padding-bottom: 30px;
+        @media screen and (min-width: $breakpoint-md) {
+            @include main-title;
+            padding-bottom: 40px;
+        }
+    }
+
+    // .team__cards
+    &__cards {
+        @media screen and (min-width: $breakpoint-md) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 60px;
+        }
+    }
+
+    // .team__card-item
+    &__card-item {
+        margin-bottom: 30px;
+        @media screen and (min-width: $breakpoint-md) {
+            flex: 1 1 40%;
+            margin-bottom: 0;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            flex: 1 1 25%;
+        }
+    }
+
+    // .team__card-img
+    &__card-img {
+        height: 300px;
+        position: relative;
+        margin-bottom: 15px;
+        img {
+            border-radius: 12px;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+        @media screen and (min-width: $breakpoint-md) {
+            height: 400px;
+        }
+    }
+
+    // .team__card-text-box
+    &__card-text-box{
+        position: relative;
+    }
+
+    // .team__icon-link
+    &__icon-link {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: $grey-bg-color;
+        &:hover::before {
+            border-bottom: 3px solid $accent-color;
+            border-left: 3px solid $accent-color;
+        }
+        &::before {
+            content: '';
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 12px;
+            width: 12px;
+            height: 12px;
+            border-bottom: 3px solid $active-regular;
+            border-left: 3px solid $active-regular;
+            transform: rotate(224deg);
+        }
+    }
+    // .team__card-title
+    &__card-title {
+        margin-bottom: 5px;
+        color: $main-color;
+        font-weight: 700;
+        @include pre-subtitle;
+        &:hover {
+            color: $accent-color;
+        }
+    }
+
+    // .team__card-text
+    &__card-text {
+        color: $grey-text-color;
+        @include cards-box-text;
+    }
+
+    // .team__card-link
+    &__card-link {
+        text-decoration: none;
+    }
+}
+

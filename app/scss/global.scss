@@ -35,6 +35,7 @@ html, body {
 .logo-text {
     font-size: 20px;
     line-height: 24px;
+	max-width: 88px;
 	@media screen and (min-width: $breakpoint-md) {
 		display: none;
 	}
@@ -53,8 +54,20 @@ html, body {
 }
 
 .active-text {
-	color: $accent-color;
-}
+	color: $accent-color !important;
+	&.active-before {
+		&::before {
+			content: '';
+			position: absolute;
+			display: block;
+			top: 100%;
+			right: 0;
+			width: 100%;
+			height: 2px;
+			background: $accent-color;
+		}
+	}
+} 
 
 .hover-link:hover {
 	color: $accent-color;
