@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team-entry-page</title>
+    <title>HLegal</title>
     <link rel="stylesheet" href="../css/style.min.css">
 </head>
 <body>
@@ -33,7 +33,7 @@
 							<a class="header__logo-link about-us-header__logo-link" href="../index.html">
 								<img class="header__logo-img" src="../images/Logo-about.svg" alt="Hlegal">
 							</a>
-							<span class="logo-text about-us-header__logo-text">team</span>
+							<span class="logo-text about-us-header__logo-text">contact</span>
 							<div class="header__logo-burger about-us-header__logo-burger">
 							</div>
 						</div>
@@ -46,14 +46,14 @@
 								<li class="header__list-item about-us-header__list-item">
 									<a class="header__list-link about-us-header__list-link" href="../services/">services</a>
 								</li>
-								<li class="header__list-item about-us-header__list-item active-text active-before">
-									<a class="header__list-link about-us-header__list-link active-text" href="../team/">team</a>
-								</li>
 								<li class="header__list-item about-us-header__list-item">
+									<a class="header__list-link about-us-header__list-link" href="../team/">team</a>
+								</li>
+								<li class="header__list-item about-us-header__list-item ">
 									<a class="header__list-link about-us-header__list-link" href="../publications/">publications</a>
 								</li>
-								<li class="header__list-item about-us-header__list-item">
-									<a class="header__list-link about-us-header__list-link" href="../contact/">contact</a>
+								<li class="header__list-item about-us-header__list-item active-text active-before">
+									<a class="header__list-link about-us-header__list-link active-text" href="#">contact</a>
 								</li>
 							</ul>
 						</nav>
@@ -63,29 +63,48 @@
 			</div>
 		</section>
 
-        <main class="team-entry">
-            <div class="container team-entry__container">
-                <div class="team-entry__box">
-                    <div class="team-entry__image">
-                        <picture><source srcset="../images/team/Oksana.webp" type="image/webp"><img src="../images/team/Oksana.jpg" alt="" class="team-entry__img"></picture>
-                    </div>
-                    <div class="team-entry__info">
-                        <h1 class="team-entry__info-title active-gradient">Оксана Кобзарь</h1>
-                        <p class="team-entry__info-text">Equity partner, Attorney-at-law</p>
-                        <a class="team-entry__info-email hover-link" href="mailto:kobzar@forstudy.space">oksana@forstudy.space</a>
-                        <a class="team-entry__info-link hover-link" href="https://www.linkedin.com/feed/">LinkedIn profile</a>
-                    </div>
-                    <div class="team-entry__text-box">
-						<div class="team-entry__text">
-							<p class="team-entry__text-text">Oksana heads the practice of international trade and shipping. He specializes in resolving disputes related to the purchase and sale of raw materials and transportation of goods by sea.</p>
-							<p class="team-entry__text-text">Desis represents the interests of shipowners, freight forwarders, cargo owners, shipping agents, container lines, as well as international banks and P&I clubs.</p>
+        <main class="contact">
+            <div class="container contact__container">
+				<div class="contact__main">
+					
+					<div class="contact__info">
+						<div class="contact__loc-box">
+							<p class="contact__loc-text">Kyiv, </p>
+							<p class="contact__loc-text">Mechnikova str, 14</p>
 						</div>
-                        <h2 class="team-entry__text-subtitle">Education</h2>
-                        <p class="team-entry__subtitle-text">National University "Odessa Law Academy", Master of Law.</p>
-                        <h2 class="team-entry__text-subtitle">Experience</h2>
-                        <p class="team-entry__subtitle-text">Her professional experience includes resolving disputes under English law and representing interests in foreign commercial arbitrations such as GAFTA, FOSFA and LMAA. Danilo also represents the interests of clients in the state courts of Ukraine on similar disputes, as well as in the ICAC and IAC at the CCI of Ukraine</p>
-                    </div>
-                </div>
+						<div class="contact__tel-email">
+							<a class="contact__tel hover-link" href="tel:0800211927">0800 211 927</a>
+							<a class="contact__email hover-link" href="mailto:contact@forstudy.space">contact@forstudy.space</a>
+						</div>
+						<div class="contact__icon">
+							<div class="contact__icon-facebook ">
+								<a href="#" class="footer__contacs-facebook-link contact__facebook">
+									<svg class="footer__contacs-facebook  hover-link">
+										<use xlink:href="../images/sprite.svg#facebook"></use>
+									</svg>
+								</a>
+								<a href="#" class="contact__icon-text">
+									<p class="contact__icon-text-link">Our page</p>
+									<p class="contact__icon-text-link">on facebook</p>
+								</a>
+							</div>
+						</div>
+					</div>
+	
+					<div class="contact__form">
+						<h1 class="contact__form-title active-gradient">We would like to help you</h1>
+						<form  class="contact__form-name">
+							<input type="text" placeholder="Name">
+							<!-- <input type="text" placeholder="Message" id="contact-message" class="contact__form-message"> -->
+							<textarea id="contact-message" rows="5" placeholder="Message" class="contact__form-message"></textarea>
+							<h2 class="contact__form-subtitle">How to answer you?</h2>
+							<input type="phone" placeholder="Phone number" value="+380">
+							<input type="email" placeholder="Email">
+							<input type="submit" value="Send message" id="contact-btn" class="contact__form-btn">
+						</form>
+					</div>
+				</div>
+                
             </div>
         </main>
 
