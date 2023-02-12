@@ -1,0 +1,183 @@
+.pub-page {
+    padding: 30px 0 60px 0;
+    @media screen and (min-width: $breakpoint-md) {
+        padding: 60px 0;
+    }
+    // .pub-page__container
+    &__container {
+        padding: 0 30px;
+        @media screen and (min-width: $breakpoint-md) {
+            padding: 0;
+        }
+        @media screen and (min-width: $breakpoint-xl) {
+            padding: 0 120px;
+        }
+    }
+
+    // .pub-page__news
+    &__news {
+        padding-bottom: 34px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 4px;
+            background: $grey-separator-color;
+        }
+    }
+
+    // .pub-page__news-img-box
+    &__news-img-box {
+        display: flex;
+        justify-content: center;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        @media screen and (min-width: $breakpoint-md) {
+            height: 500px;
+        }
+    }
+
+    // .pub-page__news-img
+    &__news-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    // .pub-page__news-title
+    &__news-title {
+        margin-bottom: 15px;
+        font-weight: 700;
+        color: $main-color;
+        @include title-m;
+        @media screen and (min-width: $breakpoint-md) {
+            @include title;
+        }
+    }
+
+    // .pub-page__news-data
+    &__news-data {
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $grey-text-color;
+        @include translate-list;
+    }
+
+    // .pub-page__main
+    &__main {
+        padding: 30px 0 34px 0;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 4px;
+            background: $grey-separator-color;
+        }
+    }
+
+    // .pub-page__main-text
+    &__main-text {
+        margin-bottom: 30px;
+        @include paragraph;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    // .pub-page__main-title
+    &__main-title {
+        font-weight: 700;
+        margin-bottom: 30px;
+        @include title;
+        @media screen and (min-width: $breakpoint-md) {
+            @include main-title;
+        }
+    }
+
+    // .pub-page__main-subtitle
+    &__main-subtitle {
+        margin-bottom: 15px;
+        font-weight: 700;
+        color: $main-alt-color;
+        @include pre-subtitle;
+        @media screen and (min-width: $breakpoint-md) {
+            @include subtitle;
+        }
+    }
+
+    // .pub-page__main-list
+    &__main-list {
+        padding-bottom: 30px;
+    }
+
+    // .pub-page__main-list-item
+    &__main-list-item {
+        margin-bottom: 15px;
+        padding-left: 40px;
+        @include unordered-list;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    // .pub-page__main-img-box
+    &__main-img-box {
+        display: flex;
+        justify-content: center;
+    }
+
+    // .pub-page__main-img
+    &__main-img {
+        max-width: 315px;
+        margin-bottom: 15px;
+        @media screen and (min-width: $breakpoint-md) {
+            max-width: 100%;
+        }
+    }
+
+    // .pub-page__main-img-text
+    &__main-img-text {
+    }
+
+    // .pub-page__icons
+    &__icons {
+        display: flex;
+        gap: 10px;
+        padding-top: 30px;
+    }
+
+    // .pub-page__icon-box
+    &__icon-box{
+        padding: 9px;
+        border-radius: 12px;
+        background: $grey-bg-color;
+    }
+
+    // .pub-page__icon
+    &__icon {
+        transition: .5s ease;
+        width: 24px;
+        height: 24px;
+    }
+    // .pub-page__icon-facebook
+    &__icon-facebook {
+        fill: #435695;
+    }
+    // .pub-page__icon-telegram
+    &__icon-telegram {
+        fill: #3CACDC;
+    }
+    // .pub-page__icon-linkedin
+    &__icon-linkedin {
+        fill: #1178B3;
+    }
+}
+

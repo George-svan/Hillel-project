@@ -104,6 +104,11 @@
 
     // .footer__contacs-facebook-link
     &__contacs-facebook-link {
+        display: inline-block;
+        margin-bottom: 10px;
+        @media screen and (min-width: $breakpoint-md) {
+            margin-bottom: 0;
+        }
     }
 
     // .footer__contacs-facebook
@@ -113,11 +118,7 @@
         height: 38px;
         cursor: pointer;
         fill: $active-regular;
-        margin-bottom: 10px;
         transition: all .5s ease;
-        @media screen and (min-width: $breakpoint-md) {
-            margin-bottom: 0;
-        }
     }
 
     // .footer__contacs-phone
